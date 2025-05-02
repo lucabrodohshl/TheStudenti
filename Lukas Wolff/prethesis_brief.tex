@@ -1,0 +1,117 @@
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+
+\title{Pre--Thesis Brief:\\\large Architecture Patterns for Real--Time \& Safety--Critical Cyber--Physical Systems}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Goal in One Sentence}
+Survey, classify and clearly explain the key \emph{architecture patterns} that engineers rely on to guarantee \textbf{real‑time determinism} and \textbf{safety} in cyber‑physical systems (CPS), then identify the open gaps---all inside a polished, $\sim$15‑page pre‑thesis document.
+
+\section{Concrete Deliverables}
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Scope paragraph} (½ page) --- what is in / out of scope.
+  \item \textbf{Mini systematic mapping} --- search IEEE Xplore, ACM DL and Scopus, keep $\approx$20 core papers; show a spreadsheet or Zotero library.
+  \item \textbf{Taxonomy diagram} --- 2–3 axes to organise the patterns (e.g.\ Timing basis, Fault‑tolerance style, Partitioning scope).
+  \item \textbf{Pattern mini‑chapters} (6--7, $\frac12$ page each), each containing:
+        \begin{itemize}[nosep]
+          \item Intent sentence
+          \item Structure diagram
+          \item Timing or fault scenario sketch
+          \item Short pros/cons table
+          \item Reference to at least one real product or standard
+          \item Link back to a clause in a safety norm (ISO 26262, IEC 61508, DO‑178C,~\ldots)
+        \end{itemize}
+  \item \textbf{Two case snapshots} ($\frac34$ page each) showing patterns in the wild.
+  \item \textbf{Gap \& trend analysis} (1 page) --- what is still unsolved and why.
+  \item \textbf{Professional packaging} --- 15 pages PDF, consistent figure style, $\approx$25 references, $\leq{}5\,\%$ similarity on plagiarism check.
+\end{enumerate}
+
+\section{Suggested Section Layout}
+
+\begin{enumerate}[label=\arabic*.]
+  \item Introduction (motivation, definitions)
+  \item Methodology (literature search and filtering)
+  \item Taxonomy
+  \item Core patterns (TTA, Separation Kernel, N‑Modular Redundancy, DDS/Publisher--Subscriber, AUTOSAR Classic vs.~Adaptive, Watchdog/Safety‑Supervisor, TSN/TTE)
+  \item Integrated safety--security patterns
+  \item Case snapshots (e.g.\ Airbus A350 network, automotive drive‑by‑wire)
+  \item Gap analysis \& future trends
+  \item Conclusion
+\end{enumerate}
+
+\section{12‑Week Work Plan}
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Week} & \textbf{Hand‑in} \\
+\midrule
+1   & Scope paragraph \\
+2--3 & Literature list \& inclusion criteria \\
+4   & One‑page annotated outline + taxonomy draft \\
+5--7 & Pattern write‑ups \& diagrams \\
+8   & Case snapshots \\
+9   & Draft Sections 5--6; internal plagiarism check \\
+10  & Gap analysis page \\
+11  & Full draft to supervisor; integrate feedback \\
+12  & Final polish \& PDF submission \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Template for \emph{One} Pattern Subsection}
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Intent} (problem statement)
+  \item \textbf{Context / forces}
+  \item \textbf{Structure diagram}
+  \item \textbf{Timing or fault scenario}
+  \item \textbf{Safety argument} (link to standard clause)
+  \item \textbf{Known uses}
+  \item \textbf{Trade‑offs}
+\end{enumerate}
+
+\section{Starter Reading Pack}
+
+\begin{itemize}[itemsep=0.3em]
+  \item H.~Kopetz, \emph{Real‑Time Systems} --- Time‑Triggered basics
+  \item J.~Lala \& R.~Harper, ``Architectural Principles for Safety‑Critical Real‑Time Applications''
+  \item S.~Frey \emph{et al.}, ``Safe and Secure System Architectures for CPS''
+  \item ISO 26262‑6, IEC 61508‑3, DO‑178C (quote exact clauses)
+\end{itemize}
+
+\section{Path to the Bachelor Thesis}
+
+Choose \emph{one} unresolved gap and turn it into an empirical or tool‑building project, e.g.:
+
+\begin{itemize}[itemsep=0.3em]
+  \item Implement a time‑triggered micro‑network on STM32 and measure jitter.
+  \item Compare TSN vs.\ TTEthernet latency under fault injection in OMNeT++.
+  \item Formally verify an ARINC 653 schedule with UPPAAL.
+\end{itemize}
+
+\section{Tips for Extra Marks}
+
+\begin{itemize}[itemsep=0.3em]
+  \item Keep diagrams uniform and readable at 100\,\% zoom.
+  \item Quantify whenever possible (jitter, bandwidth, WCET).
+  \item Cite standards sparingly but precisely (clause numbers).
+  \item End each section with one honest limitation.
+\end{itemize}
+
+\end{document}
